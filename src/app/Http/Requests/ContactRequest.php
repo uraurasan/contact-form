@@ -23,13 +23,13 @@ class ContactRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-          'name' => ['required', 'string', 'max:255'],
-          'email' => ['required', 'string','email', 'max:255'],
-          'tel' => ['required', 'numeric', 'digits_between:10,11'],
-          //contentの記述をしてしまう//
-        ];
+      return [
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string','email', 'max:255'],
+        'tel' => ['required', 'numeric', 'digits_between:10,11'],
+      ];
     }
+
     public function messages()
     {
       return [
